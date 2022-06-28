@@ -32,25 +32,25 @@ int main(){
     
 	printf("Enter your  name:\n");
 	scanf("%[^\n]s", &B.name);
-    strcpy(s,B.name);
-    printf("When are you paying the tax(dd/mm/yyyy):\n");
+    	strcpy(s,B.name);
+    	printf("When are you paying the tax(dd/mm/yyyy):\n");
 	scanf("%s", B.date);
 	printf("Enter your age:\n");
 	scanf("%d", &B.age);
-    printf("Enter income:\n");
+    	printf("Enter income:\n");
 	scanf("%d", &B.income);
-    printf("Enter the permanent address :\n");
-    scanf("%s", B.address);
-    printf("Enter the phone number : \n");
-    scanf("%s", &B.phonenumber);
-    strcpy(ph,B.phonenumber);
+    	printf("Enter the permanent address :\n");
+    	scanf("%s", B.address);
+    	printf("Enter the phone number : \n");
+    	scanf("%s", &B.phonenumber);
+    	strcpy(ph,B.phonenumber);
 	int c;
 	do{
 		printf("****TAX****\n");
 		printf("Please enter your choice from below (1-4):\n");
 		printf("1. Income\n");
 		printf("2. GST\n");
-        printf("2. VAT\n");
+       	 	printf("2. VAT\n");
 		printf("4. EXIT\n");
 		printf("Enter your choice :\n");
 		scanf("%d", &c);
@@ -61,7 +61,7 @@ int main(){
 		case 2:
 			GST();
 			break;
-        case 3:
+        	case 3:
 			VAT();
 			break;
 		default:
