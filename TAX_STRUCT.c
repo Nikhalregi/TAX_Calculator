@@ -9,7 +9,7 @@ struct tax
 	char name[15];
 	char date[14];
 	int age;
-    int income;
+    	int income;
 	char address[100];
 	char phonenumber[10];
 }B;
