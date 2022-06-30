@@ -3,7 +3,7 @@
 #include<conio.h>
 #include<string.h>
 #include"TAX_STRUCT.c"
-
+int count=1;
 void GST()
 {
     int tax=0;
@@ -28,10 +28,11 @@ void GST()
     printf("****TAX****\n\n");
     printf("Name : %s\n", s);
     printf("your GST TAX is: %d\n", tax);
-    printf("Final balance: %d\n", B.income);
+    printf("Final balance: %d\n", B.income)-tax;
     FILE *p;
     p=fopen("receipt.txt","a");
-    fprintf(p,"%s %s %d %d %s %s %d\n",B.tax,s,B.age,B.income,B.address,ph,tax);
+    fprintf(p,"%d.)%s || %s || %d || %d || %s || %d || %s || %s .\n",count,B.tax,B.date,tax,B.income,s,B.age,B.address,ph);
+    count++;
     fclose(p);
 }
 
@@ -63,7 +64,8 @@ void VAT()
     printf("Final balance: %d\n", B.income-tax);
     FILE *p;
     p=fopen("receipt.txt","a");
-    fprintf(p,"%s %s %d %d %s %s %d\n",B.tax,s,B.age,B.income,B.address,ph,tax);
+    fprintf(p,"%d.)%s || %s || %d || %d || %s || %d || %s || %s .\n",count,B.tax,B.date,tax,B.income,s,B.age,B.address,ph);
+    count++;
     fclose(p);
 }
 
@@ -95,6 +97,7 @@ void Income()
     printf("Final balance: %d\n", B.income-tax);
     FILE *p;
     p=fopen("receipt.txt","a");
-    fprintf(p,"%s %s %d %d %s %s %d\n",B.tax,s,B.age,B.income,B.address,ph,tax);
+    fprintf(p,"%d.)%s || %s || %d || %d || %s || %d || %s || %s .\n",count,B.tax,B.date,tax,B.income,s,B.age,B.address,ph);
+    count++;
     fclose(p);
 }
